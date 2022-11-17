@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!---->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | News homepage</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <script src="./index.js"></script>
+    <div class="app-wrap">
+      <div class="mobile-links">
+        <ul>
+          <div class="close-menu" onclick="{displayMenu()}">
+            <img
+              src="assets/images/icon-menu-close.svg"
+              alt="close button"
+              srcset=""
+            />
+          </div>
+          <li><a href="#" onclick="{displayMenu()}">Home</a></li>
+          <li><a href="#New" onclick="{displayMenu()}">New</a></li>
+          <li><a href="#Popular" onclick="{displayMenu()}">Popular</a></li>
+          <li><a href="#Trending" onclick="{displayMenu()}">Trending</a></li>
+          <li>
+            <a href="#Categories" onclick="{displayMenu()}">Categories</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-wrap">
+        <div class="brand">
+          <img src="./assets/images/logo.svg" alt="" />
+        </div>
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#New">New</a></li>
+            <li><a href="#Popular">Popular</a></li>
+            <li><a href="#Trending">Trending</a></li>
+            <li><a href="#Categories">Categories</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu" onclick="{displayMenu()}">
+          <img src="./assets/images/icon-menu.svg" alt="menu icon" srcset="" />
+        </div>
+      </div>
+      <div>
+        <section id="Home">
+          <section id="Popular">
+            <div class="image">
+              <img
+                class="popular-image"
+                src="assets/images/image-web-3-desktop.jpg"
+                alt="popular image"
+              />
+              <img
+                src="assets/images/image-web-3-mobile.jpg"
+                alt=""
+                class="popular-image-mobile"
+              />
+            </div>
+            <div class="popular-content">
+              <div>
+                <h1 class="popular-title">The Bright Future of Web 3.0?</h1>
+              </div>
+              <div class="desc-wrap">
+                <p class="popular-desc">
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <div>Read more</div>
+              </div>
+            </div>
+          </section>
+          <section id="New">
+            <div>
+              <h1 class="new-title">New</h1>
+            </div>
+            <div>
+              <h2><a href="#">Hydrogen VS Electric Cars</a></h2>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <div>
+              <h2><a href="#">The Downsides of AI Artistry</a></h2>
+              <p>
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <div>
+              <h2><a href="#">Is VC Funding Drying Up?</a></h2>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </section>
+        </section>
+        <section id="Trending">
+          <div class="trending-card">
+            <div class="card-image">
+              <img
+                id="card-image"
+                src="./assets/images/image-retro-pcs.jpg"
+                alt="card image"
+                srcset=""
+              />
+            </div>
+            <div class="card-text">
+              <h3 class="card-number">01</h3>
+              <h4><a href="#">Reviving Retro PCs</a></h4>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </div>
+          <div class="trending-card">
+            <div class="card-image">
+              <img
+                id="card-image"
+                src="./assets/images/image-top-laptops.jpg"
+                alt="card image"
+                srcset=""
+              />
+            </div>
+            <div class="card-text">
+              <h3 class="card-number">02</h3>
+              <h4><a href="#">Top 10 Laptops of 2022</a></h4>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </div>
+          <div class="trending-card">
+            <div class="card-image">
+              <img
+                id="card-image"
+                src="./assets/images/image-gaming-growth.jpg"
+                alt="card image"
+                srcset=""
+              />
+            </div>
+            <div class="card-text">
+              <h3 class="card-number">03</h3>
+              <h4><a href="#">The Growth of Gaming</a></h4>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Julian Camilo Orozco Arias</a>.
+    </div>
+  </body>
+</html>

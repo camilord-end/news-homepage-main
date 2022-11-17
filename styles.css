@@ -1,0 +1,354 @@
+:root {
+  /* Primary */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  /* Neutral */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', 'Courier New', Courier, monospace;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 15px;
+}
+
+.app-wrap {
+  margin: 20px 80px 20px 80px;
+  padding: 20px;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+nav {
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+
+  align-items: center;
+}
+
+li {
+  padding-left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--off-white);
+}
+
+li > a {
+  padding: 5;
+  color: var(--very-dark-blue);
+  text-decoration: none;
+}
+
+li :hover {
+  color: var(--soft-red);
+}
+
+#Home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 40px 0 40px 0;
+}
+#Trending {
+  display: flex;
+}
+
+#Popular {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.popular-content {
+  color: var(--very-dark-blue);
+  margin-top: 20px;
+  display: inherit;
+}
+
+.popular-title,
+#New > h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.popular-title {
+  font-size: 45px;
+  padding-right: 80px;
+}
+
+.popular-desc {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.desc-wrap > div {
+  text-transform: uppercase;
+  width: max-content;
+  padding: 10px 20px 10px 20px;
+  color: var(--off-white);
+  background: var(--very-dark-blue);
+}
+.desc-wrap > div:hover {
+  cursor: pointer;
+}
+
+.desc-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#New {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--off-white);
+  background: var(--very-dark-blue);
+  padding: 20px;
+}
+
+.new-title {
+  color: var(--soft-orange);
+  font-weight: 700;
+  font-size: 44px;
+  margin-top: 20px;
+}
+
+#New > div {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+#New > div:nth-child(1) {
+  padding: 0;
+}
+
+#New > div:nth-child(n + 2) {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#New > div:nth-child(2),
+#New > div:nth-child(3) {
+  border-bottom: 0.5px solid var(--off-white);
+}
+
+#New > div > h2 > a:hover {
+  cursor: pointer;
+  color: var(--soft-orange);
+}
+
+#New > div > h2 {
+  margin-bottom: 10px;
+}
+
+#Trending {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trending-card {
+  display: flex;
+}
+
+.trending-card:nth-child(-n + 2) {
+  margin-right: 20px;
+}
+
+.card-image {
+  position: relative;
+  margin-right: 150px;
+}
+
+#card-image {
+  position: absolute;
+  height: 100%;
+}
+
+.card-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+}
+
+.card-text > h4 > a {
+  color: var(--very-dark-blue);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card-text > h4 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-text > h4 > a:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.popular-image-mobile {
+  display: none;
+}
+
+.mobile-links {
+  display: none;
+}
+
+.mobile-links > ul {
+  background: var(--off-white);
+  font-size: larger;
+  padding: 40px 80px 40px 10px;
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.close-menu {
+  position: absolute;
+  align-self: flex-end;
+  top: 10px;
+  right: 10px;
+}
+
+.mobile-links > ul > li {
+  padding-top: 20px;
+}
+
+.mobile-links > ul {
+  padding-top: 150px;
+}
+
+@media (max-width: 750px) {
+  .image {
+    position: relative;
+  }
+
+  .mobile-links.active {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .mobile-links.active > ul {
+    align-items: center;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .popular-image {
+    display: none;
+  }
+
+  .popular-image-mobile {
+    display: flex;
+    width: 100%;
+  }
+
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-wrap {
+    margin: 10px;
+    padding: 10px;
+  }
+  #Home,
+  .popular-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .popular-title {
+    padding-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    line-height: 1.1;
+  }
+  .popular-image {
+    height: 250px;
+  }
+
+  .desc-wrap > div {
+    margin-top: 10px;
+    background-color: var(--soft-red);
+  }
+
+  .popular-desc {
+    line-height: 2;
+    padding-bottom: 10px;
+  }
+
+  #Popular {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  #Trending {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .trending-card {
+    margin-bottom: 30px;
+  }
+
+  .nav-wrap > nav {
+    display: none;
+  }
+}
